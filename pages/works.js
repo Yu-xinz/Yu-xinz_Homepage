@@ -1,8 +1,6 @@
 import NextLink from 'next/link'
-import { Link, Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Link, Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
 import { GridItem } from '../components/grid-item'
 
 import thumbTrinity from '../public/images/publications/Trinity.png'

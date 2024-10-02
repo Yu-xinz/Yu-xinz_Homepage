@@ -6,17 +6,14 @@ import {
   Box,
   SimpleGrid,
   Button,
-  List,
-  ListItem,
   useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear, Description, SmallText } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import thumbTrinity from '../public/images/publications/Trinity.png'
 import thumbPatterns from '../public/images/publications/DesignPatterns.png'
 import Image from 'next/image'
@@ -33,7 +30,7 @@ const Home = () => (
         css={{ backdropFilter: 'blur(10px)' }}
       >
         <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
-          "Live in Love!"
+        &quot;Live in Love!&quot;
         </span>
       </Box>
 
@@ -85,7 +82,7 @@ const Home = () => (
         </Heading>
         <Paragraph>
 
-          I'm Shizhen Zhang, a 4th year B.Eng student at the&nbsp;
+          I&apos;m Shizhen Zhang, a 4th year B.Eng student at the&nbsp;
 
           <Link
             as={NextLink}
@@ -146,13 +143,13 @@ const Home = () => (
           <span style={{ fontWeight: 'bold' }}>
             Human-Computer Interaction
           </span>
-          &nbsp;(HCI), which aims to enhance people's well-being by making technology easier and more natural to use through integrating computer technology and design.  I believe that thoughtful design can bridge the gap between complex technological systems and the users they serve, ultimately making technology more accessible and enjoyable for everyone.
+          &nbsp;(HCI), which aims to enhance people&apos;s well-being by making technology easier and more natural to use through integrating computer technology and design.  I believe that thoughtful design can bridge the gap between complex technological systems and the users they serve, ultimately making technology more accessible and enjoyable for everyone.
         </Paragraph>
 
         <br />
 
         <Paragraph>
-          Likewise, I'm really interested in installation art and singing, enjoying my tenor time in choirs!
+          Likewise, I&apos;m really interested in installation art and singing, enjoying my tenor time in choirs!
         </Paragraph>
       </Section>
 
