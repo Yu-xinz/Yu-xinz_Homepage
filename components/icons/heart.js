@@ -1,11 +1,11 @@
 const Heart = props => (
   <svg
-    width={24}
-    height={24}
+    width={20}
+    height={20}
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    strokeWidth={2}
+    strokeWidth={4}
     strokeLinecap="round"
     strokeLinejoin="round"
     className="feather feather-heart"

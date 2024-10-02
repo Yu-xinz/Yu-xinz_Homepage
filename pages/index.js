@@ -12,18 +12,18 @@ import {
 } from '@chakra-ui/react'
 import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
+import { BioSection, BioYear, Description, SmallText } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import thumbTrinity from '../public/images/publications/Trinity.png'
+import thumbPatterns from '../public/images/publications/DesignPatterns.png'
 import Image from 'next/image'
 
 const Home = () => (
   <Layout>
-    <Container>
+    <Container maxWidth="1080px">
       <Box
         borderRadius="lg"
         mb={6}
@@ -32,15 +32,26 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an indie app developer based in Japan!
+        <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
+          "Live in Love!"
+        </span>
       </Box>
 
       <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
+        <Box
+          display="flex"
+          flexDirection="column"
+          flexGrow={1}
+          alignItems="flex-end"
+          justifyContent="center"
+          textAlign="right"
+        >
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Shizhen Zhang
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>4th year B.Eng student <br />
+            (Developer / Designer)
+          </p>
         </Box>
         <Box
           flexShrink={0}
@@ -52,17 +63,17 @@ const Home = () => (
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            w="100px"
-            h="100px"
+            w="200px"
+            h="200px"
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
           >
             <Image
-              src="/images/takuya.jpg"
+              src="/images/Me.jpg"
               alt="Profile image"
-              width="100"
-              height="100"
+              width="200"
+              height="200"
             />
           </Box>
         </Box>
@@ -70,30 +81,217 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          I
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
-            Inkdrop
-          </Link>
-          . He publishes content for marketing his products and his YouTube
-          channel called &quot;
+
+          I'm Shizhen Zhang, a 4th year B.Eng student at the&nbsp;
+
           <Link
             as={NextLink}
-            href="https://www.youtube.com/devaslife"
+            href="https://sist.shanghaitech.edu.cn/sist_en/"
             passHref
             target="_blank"
           >
-            Dev as Life
+            School of Information Science and Technology
           </Link>
-          &quot; has more than 100k subscribers.
+
+          ,&nbsp;
+
+          <Link
+            as={NextLink}
+            href="https://www.shanghaitech.edu.cn/eng/"
+            passHref
+            target="_blank"
+          >
+            ShanghaiTech University
+          </Link>
+
+          , majoring in&nbsp;
+
+          <span style={{ fontWeight: 'bold' }}>
+            Computer Science
+          </span>
+          &nbsp;with a minor in&nbsp;
+
+          <span style={{ fontWeight: 'bold' }}>
+            Interaction Design
+          </span>
+
+          . I have joined&nbsp;
+          <Link
+            as={NextLink}
+            href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
+            passHref
+            target="_blank"
+          >
+            ViSeer Lab
+          </Link>
+          &nbsp;under the supervision of Prof.&nbsp;
+          <Link
+            as={NextLink}
+            href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
+            passHref
+            target="_blank"
+          >
+            Li Quan
+          </Link>
+          , where I have been actively involved in several research projects.
         </Paragraph>
+
+        <br />
+
+        <Paragraph>
+          My research interest lies in&nbsp;
+          <span style={{ fontWeight: 'bold' }}>
+            Human-Computer Interaction
+          </span>
+          &nbsp;(HCI), which aims to enhance people's well-being by making technology easier and more natural to use through integrating computer technology and design.  I believe that thoughtful design can bridge the gap between complex technological systems and the users they serve, ultimately making technology more accessible and enjoyable for everyone.
+        </Paragraph>
+
+        <br />
+
+        <Paragraph>
+          Likewise, I'm really interested in installation art and singing, enjoying my tenor time in choirs!
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>2021 - Present</BioYear>
+          <Description>
+            ShanghaiTech University <br /> <SmallText>B.Eng student</SmallText>
+          </Description>
+        </BioSection>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Selected Publications
+        </Heading>
+
+        <SimpleGrid columns={[1, 2, 1]} gap={6}>
+        <GridItem
+            title="Trinity: Synchronizing Verbal, Nonverbal, and Visual Channels to Support Academic Oral Presentation Delivery"
+            thumbnail={thumbTrinity}
+          >
+            <Link
+              as={NextLink}
+              href="https://yuchen-wu.com/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Yuchen Wu
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://mike3090.github.io/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Shengxin Li
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://yuxinz.vercel.app/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Shizhen Zhang
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://andy-xingbowang.com/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Xingbo Wang
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Quan Li
+            </Link>
+            
+            <br />
+            Submitted to International Symposium of Chinese CHI 2024
+          </GridItem>
+          
+          <GridItem
+            title="From Requirement to Solution: Unveiling Problem-Driven Design Patterns in Visual Analytics"
+            thumbnail={thumbPatterns}
+          >
+            <Link
+              as={NextLink}
+              href="https://yuchen-wu.com/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Yuchen Wu
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://gaoshh711.github.io/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Shenghan Gao
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://yuxinz.vercel.app/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Shizhen Zhang
+            </Link>
+            , Xiaofeng Dou&nbsp;
+            <Link
+              as={NextLink}
+              href="https://andy-xingbowang.com/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Xingbo Wang
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Quan Li
+            </Link>
+            
+            <br />
+            Submitted to IEEE Transactions on Visualization and Computer Graphics (TVCG) 2024
+          </GridItem>
+
+        </SimpleGrid>
+
         <Box align="center" my={4}>
           <Button
             as={NextLink}
@@ -102,139 +300,20 @@ const Home = () => (
             rightIcon={<ChevronRightIcon />}
             colorScheme="teal"
           >
-            My portfolio
+            All publications
           </Button>
         </Box>
       </Section>
 
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
-        </BioSection>
-      </Section>
-
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          What I ♥
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
+          <span style={{ fontWeight: 'bold' }}>
+            Singing, singing and singing!
+          </span>
         </Paragraph>
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          On the web
-        </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
-
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel (&gt;200k subs)
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid>
-
-        <Heading as="h3" variant="section-title">
-          Newsletter
-        </Heading>
-        <p>
-          Join me on a behind-the-scenes coding journey. Weekly updates on
-          projects, tutorials, and videos
-        </p>
-
-        <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="https://www.devas.life/"
-            scroll={false}
-            leftIcon={<EmailIcon />}
-            colorScheme="teal"
-          >
-            Sign up my newsletter here
-          </Button>
-        </Box>
       </Section>
     </Container>
   </Layout>
