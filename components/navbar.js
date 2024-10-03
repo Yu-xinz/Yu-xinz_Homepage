@@ -51,7 +51,7 @@ const Navbar = props => {
       w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
       css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={2}
+      zIndex={3}
       {...props}
     >
       <Container
@@ -79,6 +79,11 @@ const Navbar = props => {
           <LinkItem href="/works" path={path}>
             Publications
           </LinkItem>
+
+          <LinkItem href="mailto:zhangshzh@shanghaitech.edu.cn" path={path}>
+            Email
+          </LinkItem>
+
         </Stack>
 
         <Box flex={1} align="right">
