@@ -16,6 +16,7 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import thumbTrinity from '../public/images/publications/Trinity.png'
 import thumbPatterns from '../public/images/publications/DesignPatterns.png'
+import thumbUnderstood from '../public/images/publications/Understood.png'
 import Image from 'next/image'
 
 const Home = () => (
@@ -23,6 +24,7 @@ const Home = () => (
     <Container maxWidth="1080px">
       <Box
         borderRadius="lg"
+        mt={10}
         mb={6}
         p={3}
         textAlign="center"
@@ -30,9 +32,10 @@ const Home = () => (
         css={{ backdropFilter: 'blur(10px)' }}
       >
         <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
-        &quot;Live in Love!&quot;
+          &quot;Live in Love!&quot;
         </span>
       </Box>
+
 
       <Box display={{ md: 'flex' }}>
         <Box
@@ -46,9 +49,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Shizhen Zhang
           </Heading>
-          <p>4th year B.Eng student <br />
-            (Developer / Designer)
-          </p>
+          <p>1st year M.S. student</p>
         </Box>
         <Box
           flexShrink={0}
@@ -81,9 +82,25 @@ const Home = () => (
           I
         </Heading>
         <Paragraph>
-
-          I&apos;m Shizhen Zhang, a 4th year B.Eng student at the&nbsp;
-
+          I'm Shizhen Zhang, a incomming 1st year M.S. in Computer Science student at the&nbsp;
+          <Link
+            as={NextLink}
+            href="https://www.mccormick.northwestern.edu/"
+            passHref
+            target="_blank"
+          >
+            McCormick School of Engineering
+          </Link>
+          ,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://www.northwestern.edu/"
+            passHref
+            target="_blank"
+          >
+            Northwestern University
+          </Link>
+          . Previously, I completed my undergraduate studies at the&nbsp;
           <Link
             as={NextLink}
             href="https://sist.shanghaitech.edu.cn/sist_en/"
@@ -92,9 +109,7 @@ const Home = () => (
           >
             School of Information Science and Technology
           </Link>
-
           ,&nbsp;
-
           <Link
             as={NextLink}
             href="https://www.shanghaitech.edu.cn/eng/"
@@ -103,28 +118,7 @@ const Home = () => (
           >
             ShanghaiTech University
           </Link>
-
-          , majoring in&nbsp;
-
-          <span style={{ fontWeight: 'bold' }}>
-            Computer Science
-          </span>
-          &nbsp;with a minor in&nbsp;
-
-          <span style={{ fontWeight: 'bold' }}>
-            Interaction Design
-          </span>
-
-          . I have joined&nbsp;
-          <Link
-            as={NextLink}
-            href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
-            passHref
-            target="_blank"
-          >
-            ViSeer Lab
-          </Link>
-          &nbsp;under the supervision of Prof.&nbsp;
+          , under the supervision of Prof.&nbsp;
           <Link
             as={NextLink}
             href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
@@ -133,18 +127,20 @@ const Home = () => (
           >
             Li Quan
           </Link>
-          , where I have been actively involved in several research projects.
+          . I'm currently looking for some exciting research opportunities where I can learn, contribute, and grow as a researcher in a collaborative environment!
         </Paragraph>
 
         <br />
 
         <Paragraph>
-          My research interest lies in&nbsp;
+          My research interests are centered around&nbsp;
           <span style={{ fontWeight: 'bold' }}>
             Human-Computer Interaction
           </span>
-          &nbsp;(HCI), which aims to enhance people&apos;s well-being by making technology easier and more natural to use through integrating computer technology and design.  I believe that thoughtful design can bridge the gap between complex technological systems and the users they serve, ultimately making technology more accessible and enjoyable for everyone.
+          &nbsp;(HCI), with a particular focus on designing Virtual and Mixed Reality experiences and accessibility-oriented applications. I am passionate about exploring how technology can be made more intuitive, inclusive, and enjoyable, aiming to bridge the gap between complex systems and the diverse needs of users. Through thoughtful design and experimentation, I hope to contribute to creating tools and experiences that truly enhance people’s interaction with technology.
         </Paragraph>
+
+
 
         <br />
 
@@ -158,9 +154,15 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>2021 - Present</BioYear>
+          <BioYear>2021 - 2025</BioYear>
           <Description>
             ShanghaiTech University <br /> <SmallText>B.Eng student</SmallText>
+          </Description>
+        </BioSection>
+        <BioSection>
+          <BioYear>Incomming~</BioYear>
+          <Description>
+            Northwestern University <br /> <SmallText>M.S student</SmallText>
           </Description>
         </BioSection>
       </Section>
@@ -171,18 +173,19 @@ const Home = () => (
         </Heading>
 
         <SimpleGrid columns={[1, 2, 1]} gap={6}>
-        <GridItem
-            title="Trinity: Synchronizing Verbal, Nonverbal, and Visual Channels to Support Academic Oral Presentation Delivery"
-            thumbnail={thumbTrinity}
+          <GridItem
+            title="Understood: Real-Time Communication Support for Adults with ADHD Using Mixed Reality"
+            thumbnail={thumbUnderstood}
           >
             <Link
               as={NextLink}
-              href="https://yuchen-wu.com/"
+              href="https://yuxinz.vercel.app/"
               passHref
               target="_blank"
               color="inherit"
+              fontWeight="bold"
             >
-              Yuchen Wu
+              Shizhen Zhang
             </Link>
             ,&nbsp;
             <Link
@@ -197,26 +200,6 @@ const Home = () => (
             ,&nbsp;
             <Link
               as={NextLink}
-              href="https://yuxinz.vercel.app/"
-              passHref
-              target="_blank"
-              color="inherit"
-            >
-              Shizhen Zhang
-            </Link>
-            ,&nbsp;
-            <Link
-              as={NextLink}
-              href="https://andy-xingbowang.com/"
-              passHref
-              target="_blank"
-              color="inherit"
-            >
-              Xingbo Wang
-            </Link>
-            ,&nbsp;
-            <Link
-              as={NextLink}
               href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
               passHref
               target="_blank"
@@ -224,11 +207,11 @@ const Home = () => (
             >
               Quan Li
             </Link>
-            
+
             <br />
-            Submitted to International Symposium of Chinese CHI 2024
+            UIST 2025
           </GridItem>
-          
+
           <GridItem
             title="From Requirement to Solution: Unveiling Problem-Driven Design Patterns in Visual Analytics"
             thumbnail={thumbPatterns}
@@ -259,6 +242,7 @@ const Home = () => (
               passHref
               target="_blank"
               color="inherit"
+              fontWeight="bold"
             >
               Shizhen Zhang
             </Link>
@@ -282,9 +266,68 @@ const Home = () => (
             >
               Quan Li
             </Link>
-            
+
             <br />
-            Submitted to IEEE Transactions on Visualization and Computer Graphics (TVCG) 2024
+            TVCG 2025
+          </GridItem>
+
+          <GridItem
+            title="Trinity: Synchronizing Verbal, Nonverbal, and Visual Channels to Support Academic Oral Presentation Delivery"
+            thumbnail={thumbTrinity}
+          >
+            <Link
+              as={NextLink}
+              href="https://yuchen-wu.com/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Yuchen Wu
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://mike3090.github.io/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Shengxin Li
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://yuxinz.vercel.app/"
+              passHref
+              target="_blank"
+              color="inherit"
+              fontWeight="bold"
+            >
+              Shizhen Zhang
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://andy-xingbowang.com/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Xingbo Wang
+            </Link>
+            ,&nbsp;
+            <Link
+              as={NextLink}
+              href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
+              passHref
+              target="_blank"
+              color="inherit"
+            >
+              Quan Li
+            </Link>
+
+            <br />
+            Chinese CHI 2024 (Best Paper Award)
           </GridItem>
 
         </SimpleGrid>
