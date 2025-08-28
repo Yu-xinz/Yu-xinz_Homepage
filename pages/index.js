@@ -83,7 +83,7 @@ const Home = () => (
           I
         </Heading>
         <Paragraph>
-          I&apos;m Shizhen Zhang, a incomming 1st year M.S. in Computer Science student at the&nbsp;
+          I&apos;m Shizhen Zhang, an incomming 1st year M.S. in Computer Science student at the&nbsp;
           <Link
             as={NextLink}
             href="https://www.mccormick.northwestern.edu/"
