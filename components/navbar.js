@@ -21,13 +21,15 @@ import ThemeToggleButton from './theme-toggle-button'
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const activeBg = useColorModeValue('#B5D8C5', '#FFF8F0')
   return (
     <Link
       as={NextLink}
       href={href}
       scroll={false}
       p={2}
-      bg={active ? 'grassTeal' : undefined}
+      borderRadius="md"
+      bg={active ? activeBg : undefined}
       color={active ? '#202023' : inactiveColor}
       target={target}
       {...props}
@@ -50,6 +52,7 @@ const Navbar = props => {
       as="nav"
       w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
+      boxShadow={useColorModeValue('md', 'dark-lg')}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={3}
       {...props}
@@ -77,11 +80,19 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Publications
+            <strong>Publications</strong>
           </LinkItem>
 
-          <LinkItem href="mailto:zhangshzh@shanghaitech.edu.cn" path={path}>
-            Email
+          <LinkItem href="mailto:shizhenzhang2027@u.northwestern.edu" path={path}>
+            <strong>Email</strong>
+          </LinkItem>
+
+          <LinkItem
+            href="/images/Shizhen_Zhang_CV.pdf"
+            path={path}
+            target="_blank"
+          >
+            <strong>CV</strong>
           </LinkItem>
 
         </Stack>

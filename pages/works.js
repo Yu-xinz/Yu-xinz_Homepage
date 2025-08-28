@@ -9,7 +9,7 @@ import thumbUnderstood from '../public/images/publications/Understood.png'
 
 const Works = () => (
   <Layout title="Works">
-    <Container maxWidth="1080px">
+    <Container maxWidth="1080px" mt={6} mb={6}>
       <Heading as="h3" fontSize={20} mb={4}>
         Publications
       </Heading>

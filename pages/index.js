@@ -8,7 +8,7 @@ import {
   Button,
   useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon, Text } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear, Description, SmallText } from '../components/bio'
 import Layout from '../components/layouts/article'
@@ -29,6 +29,7 @@ const Home = () => (
         p={3}
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        boxShadow={useColorModeValue('md', 'dark-lg')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
         <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
@@ -68,7 +69,7 @@ const Home = () => (
             overflow="hidden"
           >
             <Image
-              src="/images/Me.jpg"
+              src={useColorModeValue('/images/Me.jpg', '/images/Me-dark.jpg')}
               alt="Profile image"
               width="200"
               height="200"
@@ -156,13 +157,15 @@ const Home = () => (
         <BioSection>
           <BioYear>2021 - 2025</BioYear>
           <Description>
-            ShanghaiTech University <br /> <SmallText>B.Eng student</SmallText>
+            <Text as="span" fontWeight="bold">ShanghaiTech University</Text> <br />
+            <SmallText>B.Eng student</SmallText>
           </Description>
         </BioSection>
         <BioSection>
           <BioYear>Incomming~</BioYear>
           <Description>
-            Northwestern University <br /> <SmallText>M.S student</SmallText>
+            <Text as="span" fontWeight="bold">Northwestern University</Text> <br />
+            <SmallText>M.S student</SmallText>
           </Description>
         </BioSection>
       </Section>
@@ -172,7 +175,7 @@ const Home = () => (
           Selected Publications
         </Heading>
 
-        <SimpleGrid columns={[1, 2, 1]} gap={6}>
+        <SimpleGrid columns={[1, 2, 1]} gap={6} my={6} mb={6}>
           <GridItem
             title="Understood: Real-Time Communication Support for Adults with ADHD Using Mixed Reality"
             thumbnail={thumbUnderstood}
@@ -332,16 +335,28 @@ const Home = () => (
 
         </SimpleGrid>
 
-        <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="/works"
-            scroll={false}
-            rightIcon={<ChevronRightIcon />}
-            colorScheme="teal"
-          >
-            All publications
-          </Button>
+        <Box align="center" my={6}>
+          <Box align="center" my={6}>
+            <Button
+              as={NextLink}
+              href="/works"
+              scroll={false}
+              rightIcon={<ChevronRightIcon />}
+              bg={useColorModeValue('#B5D8C5', '#FFF8F0')}
+              color={useColorModeValue('gray.800', 'gray.900')}
+              boxShadow={useColorModeValue('md', 'dark-lg')}
+              _hover={{
+                filter: useColorModeValue('brightness(0.9)', 'brightness(0.9)'),
+              }}
+              transition="all 0.2s ease-in-out"
+              w="auto"
+              px={6}
+              textAlign="center"
+            >
+              All publications
+            </Button>
+          </Box>
+
         </Box>
       </Section>
 
