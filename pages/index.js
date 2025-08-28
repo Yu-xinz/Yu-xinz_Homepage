@@ -82,7 +82,7 @@ const Home = () => (
           I
         </Heading>
         <Paragraph>
-          I'm Shizhen Zhang, a incomming 1st year M.S. in Computer Science student at the&nbsp;
+          I&apos;m Shizhen Zhang, a incomming 1st year M.S. in Computer Science student at the&nbsp;
           <Link
             as={NextLink}
             href="https://www.mccormick.northwestern.edu/"
@@ -127,7 +127,7 @@ const Home = () => (
           >
             Li Quan
           </Link>
-          . I'm currently looking for some exciting research opportunities where I can learn, contribute, and grow as a researcher in a collaborative environment!
+          . I&apos;m currently looking for some exciting research opportunities where I can learn, contribute, and grow as a researcher in a collaborative environment!
         </Paragraph>
 
         <br />
