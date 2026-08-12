@@ -6,6 +6,8 @@ import { GridItem } from '../components/grid-item'
 import thumbTrinity from '../public/images/publications/Trinity.png'
 import thumbPatterns from '../public/images/publications/DesignPatterns.png'
 import thumbUnderstood from '../public/images/publications/Understood.png'
+import thumbUPinch from '../public/images/publications/UPinch.png'
+import thumbMediMate from '../public/images/publications/MediMate.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -15,6 +17,117 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 2, 1]} gap={6}>
+        <GridItem
+          href="https://dl.acm.org/doi/10.1145/3800645.3812891"
+          title="MediMate: Co-Crafting Patient-Centered Medical Explanations Using LLMs as a Rehearsal Partner"
+          thumbnail={thumbMediMate}
+        >
+          Yifan Jin,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://yuxinz.vercel.app/"
+            passHref
+            target="_blank"
+            color="inherit"
+            fontWeight="bold"
+          >
+            Shizhen Zhang
+          </Link>
+          , Dongjun Chen,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://cat-ouyang.github.io/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Yang Ouyang
+          </Link>
+          , Yuheng Shao, Chang Jiang, Hanlu Li,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Quan Li
+          </Link>
+
+          <br />
+          DIS 2026 (Best Paper Honourable Mention)
+        </GridItem>
+
+        <GridItem
+          href="https://dl.acm.org/doi/10.1145/3786995.3787021"
+          title="UPinch: Enabling Unaligned Gaze-Hand Coordination for Selection in 3D Environments"
+          thumbnail={thumbUPinch}
+        >
+          <Link
+            as={NextLink}
+            href="https://yuchen-wu.com/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Yuchen Wu
+          </Link>
+          ,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://yuxinz.vercel.app/"
+            passHref
+            target="_blank"
+            color="inherit"
+            fontWeight="bold"
+          >
+            Shizhen Zhang
+          </Link>
+          ,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://mike3090.github.io/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Shengxin Li
+          </Link>
+          ,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://cat-ouyang.github.io/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Yang Ouyang
+          </Link>
+          ,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://zhuqian.org/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Qian Zhu
+          </Link>
+          ,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Quan Li
+          </Link>
+
+          <br />
+          ICHEC 2025
+        </GridItem>
+
         <GridItem
           title="Understood: Real-Time Communication Support for Adults with ADHD Using Mixed Reality"
           thumbnail={thumbUnderstood}
