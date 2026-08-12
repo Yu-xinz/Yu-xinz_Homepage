@@ -164,7 +164,7 @@ const Home = () => (
           </Description>
         </BioSection>
         <BioSection>
-          <BioYear>Incomming~</BioYear>
+          <BioYear>Currently</BioYear>
           <Description>
             <Text as="span" fontWeight="bold">Northwestern University</Text> <br />
             <SmallText>M.S student</SmallText>
@@ -290,6 +290,7 @@ const Home = () => (
           </GridItem>
 
           <GridItem
+            href="https://dl.acm.org/doi/10.1145/3746059.3747602"
             title="Understood: Real-Time Communication Support for Adults with ADHD Using Mixed Reality"
             thumbnail={thumbUnderstood}
           >
@@ -329,6 +330,7 @@ const Home = () => (
           </GridItem>
 
           <GridItem
+            href="https://doi.org/10.1109/TVCG.2025.3538768"
             title="From Requirement to Solution: Unveiling Problem-Driven Design Patterns in Visual Analytics"
             thumbnail={thumbPatterns}
           >
@@ -388,6 +390,7 @@ const Home = () => (
           </GridItem>
 
           <GridItem
+            href="https://dl.acm.org/doi/10.1145/3758871.3758877"
             title="Trinity: Synchronizing Verbal, Nonverbal, and Visual Channels to Support Academic Oral Presentation Delivery"
             thumbnail={thumbTrinity}
           >
