@@ -59,6 +59,46 @@ const Works = () => (
         </GridItem>
 
         <GridItem
+          href="https://dl.acm.org/doi/10.1145/3746059.3747602"
+          title="Understood: Real-Time Communication Support for Adults with ADHD Using Mixed Reality"
+          thumbnail={thumbUnderstood}
+        >
+          <Link
+            as={NextLink}
+            href="https://yuxinz.vercel.app/"
+            passHref
+            target="_blank"
+            color="inherit"
+            fontWeight="bold"
+          >
+            Shizhen Zhang
+          </Link>
+          ,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://mike3090.github.io/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Shengxin Li
+          </Link>
+          ,&nbsp;
+          <Link
+            as={NextLink}
+            href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
+            passHref
+            target="_blank"
+            color="inherit"
+          >
+            Quan Li
+          </Link>
+
+          <br />
+          TVCG 2025
+        </GridItem>
+
+        <GridItem
           href="https://dl.acm.org/doi/10.1145/3786995.3787021"
           title="UPinch: Enabling Unaligned Gaze-Hand Coordination for Selection in 3D Environments"
           thumbnail={thumbUPinch}
@@ -126,46 +166,6 @@ const Works = () => (
 
           <br />
           ICHEC 2025
-        </GridItem>
-
-        <GridItem
-          href="https://dl.acm.org/doi/10.1145/3746059.3747602"
-          title="Understood: Real-Time Communication Support for Adults with ADHD Using Mixed Reality"
-          thumbnail={thumbUnderstood}
-        >
-          <Link
-            as={NextLink}
-            href="https://yuxinz.vercel.app/"
-            passHref
-            target="_blank"
-            color="inherit"
-            fontWeight="bold"
-          >
-            Shizhen Zhang
-          </Link>
-          ,&nbsp;
-          <Link
-            as={NextLink}
-            href="https://mike3090.github.io/"
-            passHref
-            target="_blank"
-            color="inherit"
-          >
-            Shengxin Li
-          </Link>
-          ,&nbsp;
-          <Link
-            as={NextLink}
-            href="https://faculty.sist.shanghaitech.edu.cn/liquan/"
-            passHref
-            target="_blank"
-            color="inherit"
-          >
-            Quan Li
-          </Link>
-
-          <br />
-          TVCG 2025
         </GridItem>
 
         <GridItem
